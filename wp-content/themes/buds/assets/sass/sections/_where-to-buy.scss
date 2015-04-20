@@ -1,0 +1,18 @@
+
+.where-to-buy {
+  padding: $base*4 0;
+  
+  .content {
+    max-width: 720px;
+    margin-bottom: $base*2;
+  }
+}
+
+.location-grid [class*="col-"] {
+
+  h3 {
+    margin-bottom: 12px;
+    padding-top: $base;
+    border-top: 6px solid $green;
+  }
+}

@@ -1,0 +1,21 @@
+
+.story {
+  padding: $base*4 0;
+  
+  .pic-bud {
+    float: left;
+    width: 33.333%
+  }
+  
+  .content {
+    float: left;
+    width: 66.666%;
+  }
+}
+
+.story p {
+  @include font-size(16px);
+  float: left;
+  width: 50%;
+  padding-right: 40px;
+}

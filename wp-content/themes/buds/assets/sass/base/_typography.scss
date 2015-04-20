@@ -1,0 +1,87 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic|Open+Sans+Condensed:700);
+
+$serif: 'Sentinel SSm A', 'Sentinel SSm B', Georgia, serif;
+$sans: 'Knockout 71 A', 'Knockout 71 B', Helvetica, arial, sans-serif;
+
+$reg:   400;
+$bold:  700;
+$heavy: 900;
+
+$base:  24px;
+
+body {
+  font: $reg 1em/1.5em $serif;
+}
+
+h1,h2,h3,h4,h5 {
+  line-height: 1;
+}
+
+h1 {
+  @include font-size(82px);
+  color: $creme;
+  font-family: $sans;
+}
+
+h2 {
+  @include font-size(42px);
+  margin-bottom: $base;
+  color: $green;
+  font-family: $sans;
+  
+  &:after {
+    content: " ";
+    width: 100px;
+    height: 4px;
+    background: $yellow;
+  }
+}
+
+h3 {
+  @include font-size(24px);
+  font-weight: bold;
+}
+
+h4 {
+  @include font-size(18px);
+  font-weight: bold;
+}
+
+p {
+  @include font-size(18px);
+}
+
+strong {
+  font-weight: $bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.label {
+  font-weight: $bold;
+}
+
+.body p,
+.body ul,
+.body ol {
+  margin-bottom: $base;
+
+  &:last-child, &.label {
+    margin-bottom: 0;
+  }
+}
+
+.body ul,
+.body ol {
+  margin-left: 1.5em;
+}
+
+.body ul li {
+  list-style: disc;
+}
+
+.body ol li {
+  list-style: decimal;
+}

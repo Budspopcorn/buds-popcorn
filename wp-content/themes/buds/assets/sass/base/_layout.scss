@@ -1,0 +1,23 @@
+body {
+  background: $green;
+}
+
+.page {
+  padding: 0 20px;
+  
+  @include bp-min-width($medium) {
+    @include cf;
+    margin: 0 auto;
+    padding: 0 40px;
+    background: $creme;
+  }
+}
+
+.wrapper {
+  @include cf;
+
+  @include bp-min-width($medium) {
+    max-width: 1208px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,41 @@
+
+.header {
+  position: relative;
+  padding: $base 0;
+}
+
+.logo {
+  @include horizontal-center(absolute);
+  top: 8px;
+  width: 188px;
+  z-index: 10;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0 40px;
+  
+  &:nth-child(2) {
+    margin-right: 100px;
+  }
+  
+  &:nth-child(3) {
+    margin-left: 100px;
+  }
+
+}
+
+.nav a {
+  font-family: $sans;
+  color: $green;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+
+  @include bp-min-width($medium) {
+    @include font-size(17px);
+  }
+}
