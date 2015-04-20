@@ -1,6 +1,42 @@
 
 .contact {
+  position: relative;
   padding: $base*2 0;
-  background: $green;
+  background: $green $bg-contact;
+  background-size: cover;
   color: #fff;
+
+  @include bp-min-width($medium) {
+    min-height: 530px;
+  }
+}
+
+.contact .wrapper {
+  position: absolute;
+  left: 5%;
+  bottom: $base*1;
+  max-width: 600px;
+
+  @include bp-min-width($medium) {
+    bottom: $base*3;
+  }
+}
+
+.contact h2 {
+  color: $yellow;
+}
+
+.contact p {
+  margin-bottom: $base;
+}
+
+.contact li {
+  @include font-size(24px);
+  float: left;
+  margin-right: 80px;
+  font-family: $sans;
+}
+
+.contact a {
+  color: $yellow;
 }

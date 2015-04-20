@@ -8,11 +8,14 @@
   }
 }
 
-.location-grid [class*="col-"] {
+.locations .col-1-3 h3 {
+  margin-bottom: 8px;
+}
 
-  h3 {
-    margin-bottom: 12px;
-    padding-top: $base;
-    border-top: 6px solid $green;
-  }
+.locations .col-1-3 p:first-of-type {
+  @include font-size(17px);
+}
+
+.locations a {
+  font-weight: $bold;
 }

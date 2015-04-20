@@ -1,5 +1,46 @@
 
 .popcorn {
-  padding: $base*8 0;
-  background: $yellow;
+  position: relative;
+  padding: $base*4 0;
+  border-top: 2px solid $yellow;
+  border-bottom: 2px solid $yellow;
+}
+
+.popcorn:before {
+  @include horizontal-center(absolute);
+  content: "";
+  top: -33px;
+  width: 108px;
+  height: 67px;
+  padding: 0 20px;
+  background: $creme $popped-corn no-repeat center center;
+}
+
+.popcorn:after {
+  @include horizontal-center(absolute);
+  content: "";
+  bottom: -33px;
+  width: 108px;
+  height: 67px;
+  padding: 0 20px;
+  background: $creme $popped-corn no-repeat center center;
+}
+
+.popcorn p {
+  margin-bottom: $base;
+}
+
+.popcorn-links {
+  @include cf;
+  padding-top: 36px;
+}
+
+.popcorn-links li {
+  @include font-size(15px);
+  float: left;
+  font-weight: $bold;
+  
+  &:first-child {
+    margin-right: 100px;
+  }
 }

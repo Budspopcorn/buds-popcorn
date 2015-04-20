@@ -1,11 +1,10 @@
 $pad: 20px;
 
-.grid {
+.row {
   @include cf;
-  margin: 0 0 $base 0;
   
   @include bp-min-width($medium) {
-    margin: 0 -20px $base -20px;
+    margin: 0 -20px;
   }
 }
 

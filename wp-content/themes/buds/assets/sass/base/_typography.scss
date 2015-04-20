@@ -1,15 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic|Open+Sans+Condensed:700);
 
 $serif: 'Sentinel SSm A', 'Sentinel SSm B', Georgia, serif;
 $sans: 'Knockout 71 A', 'Knockout 71 B', Helvetica, arial, sans-serif;
 
 $reg:   400;
 $bold:  700;
-$heavy: 900;
 
 $base:  24px;
 
 body {
+  color: $brown;
   font: $reg 1em/1.5em $serif;
 }
 
@@ -18,37 +17,42 @@ h1,h2,h3,h4,h5 {
 }
 
 h1 {
-  @include font-size(82px);
+  @include font-size(30px);
   color: $creme;
   font-family: $sans;
+
+  @include bp-min-width($medium) {
+    @include font-size(82px);
+  }
 }
 
 h2 {
-  @include font-size(42px);
+  @include font-size(30px);
   margin-bottom: $base;
   color: $green;
   font-family: $sans;
-  
-  &:after {
-    content: " ";
-    width: 100px;
-    height: 4px;
-    background: $yellow;
+
+  @include bp-min-width($medium) {
+    @include font-size(60px);
   }
 }
 
 h3 {
   @include font-size(24px);
-  font-weight: bold;
+  font-family: $sans;
+
+  @include bp-min-width($medium) {
+    @include font-size(30px);
+  }
 }
 
 h4 {
-  @include font-size(18px);
+  @include font-size(17px);
   font-weight: bold;
 }
 
 p {
-  @include font-size(18px);
+  @include font-size(15px);
 }
 
 strong {

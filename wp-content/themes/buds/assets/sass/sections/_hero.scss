@@ -1,17 +1,21 @@
 
 .hero {
   position: relative;
-  background: $green $hero-home no-repeat;
+  background: $green $bg-hero no-repeat;
   background-size: cover;
 
   @include bp-min-width($medium) {
     height: 624px;
   }
-  
-  h1 {
-    position: absolute;
-    left: 5%;
-    bottom: $base*2;
-    max-width: 600px;
+}
+
+.hero h1 {
+  position: absolute;
+  left: 5%;
+  bottom: $base*1;
+  max-width: 600px;
+
+  @include bp-min-width($medium) {
+    bottom: $base*3;
   }
 }
