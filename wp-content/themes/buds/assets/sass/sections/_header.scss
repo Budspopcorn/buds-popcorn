@@ -5,10 +5,15 @@
 }
 
 .logo {
-  @include horizontal-center(absolute);
-  top: 8px;
-  width: 188px;
-  z-index: 10;
+  float: left;
+  width: 100px;
+
+  @include bp-min-width($medium) {
+    @include horizontal-center(absolute);
+    top: 8px;
+    width: 188px;
+    z-index: 10;
+  }
 }
 
 .nav {
@@ -20,11 +25,11 @@
   margin: 0 36px;
   
   &:nth-child(2) {
-    margin-right: 130px;
+    margin-right: 150px;
   }
   
   &:nth-child(3) {
-    margin-left: 130px;
+    margin-left: 150px;
   }
 
 }
@@ -32,10 +37,10 @@
 .nav a {
   font-family: $sans;
   color: $green;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.0125em;
   text-transform: uppercase;
 
   @include bp-min-width($medium) {
-    @include font-size(17px);
+    @include font-size(19px);
   }
 }

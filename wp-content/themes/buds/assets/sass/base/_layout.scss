@@ -1,16 +1,17 @@
 body {
+  padding: 0 10px;
   background: $green;
 }
 
 .container {
   padding: 0 20px;
+  background: $creme;
   
   @include bp-min-width($medium) {
     @include cf;
     max-width: 1288px;
     margin: 0 auto;
     padding: 0 40px;
-    background: $creme;
   }
 }
 

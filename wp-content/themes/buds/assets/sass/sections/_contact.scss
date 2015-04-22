@@ -35,8 +35,18 @@
   float: left;
   margin-right: 80px;
   font-family: $sans;
+  
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .contact a {
   color: $yellow;
 }
+
+.contact [class*="icon-"] {
+  margin-right: 10px;
+}
+
+

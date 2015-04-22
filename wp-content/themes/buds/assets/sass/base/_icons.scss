@@ -1,0 +1,37 @@
+
+.svg-defs {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+svg {
+  @include global-transition;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+[class*="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-arrow {
+  width: 10px;
+  height: 15px;
+  fill: $green;
+}
+
+.icon-email {
+  width: 30px;
+  height: 32px;
+  fill: $yellow;
+}
+
+.icon-social {
+  width: 32px;
+  height: 32px;
+  fill: $yellow;
+}

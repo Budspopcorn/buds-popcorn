@@ -1,14 +1,8 @@
 <?php
 
-	// Options Framework (https://github.com/devinsays/options-framework-plugin)
-	if ( !function_exists( 'optionsframework_init' ) ) {
-		define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/_/inc/' );
-		require_once dirname( __FILE__ ) . '/_/inc/options-framework.php';
-	}
-
 	// Theme Setup (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
 	function buds_setup() {
-		load_theme_textdomain( 'buds', get_template_directory() . '/languages' );
+		//load_theme_textdomain( 'buds', get_template_directory() . '/languages' );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
 		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status' ) );
@@ -20,19 +14,7 @@
 	// Scripts & Styles (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
 	function buds_scripts_styles() {
 		global $wp_styles;
-
-		// Load Comments
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
-			wp_enqueue_script( 'comment-reply' );
-
-		// Load Stylesheets
-//		wp_enqueue_style( 'buds-reset', get_template_directory_uri() . '/reset.css' );
-//		wp_enqueue_style( 'buds-style', get_stylesheet_uri() );
-
-		// Load IE Stylesheet.
-//		wp_enqueue_style( 'buds-ie', get_template_directory_uri() . '/css/ie.css', array( 'buds-style' ), '20130213' );
-//		$wp_styles->add_data( 'buds-ie', 'conditional', 'lt IE 9' );
-
+		
 		// Modernizr
 		// This is an un-minified, complete version of Modernizr. Before you move to production, you should generate a custom build that only has the detects you need.
 		// wp_enqueue_script( 'buds-modernizr', get_template_directory_uri() . '/_/js/modernizr-2.6.2.dev.js' );

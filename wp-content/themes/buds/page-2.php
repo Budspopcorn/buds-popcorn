@@ -35,8 +35,22 @@
 		    <div class="col-1-2">
     			<?php the_field('the_popcorn'); ?>
     			<ul class="popcorn-links">
-    			  <li><a href="" data-modal="instructions">Popping Instructions</a></li>
-    			  <li><a href="" data-modal="recipe">Chocolate Popcorn Recipe</a></li>
+    			  <li>
+    			    <a href="" data-modal="instructions">
+    			      Popping Instructions
+      			    <svg class="icon-arrow" viewBox="0 0 10 15">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </a>
+            </li>
+    			  <li>
+    			    <a href="" data-modal="recipe">
+    			      Chocolate Popcorn Recipe
+      			    <svg class="icon-arrow" viewBox="0 0 10 15">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+    			    </a>
+            </li>
     			</ul>
 		    </div>
 		  </div>
@@ -76,9 +90,30 @@
 		  <div class="wrapper">
   			<?php the_field('contact_us'); ?>
   			<ul class="contact-links">
-  			  <li><a href="">Email Us</a></li>
-  			  <li><a href="">Facebook</a></li>
-  			  <li><a href="">Twitter</a></li>
+  			  <li>
+  			    <a href="">
+              <svg class="icon-email" viewBox="0 0 30 22.5">
+                <use xlink:href="#icon-email"></use>
+              </svg>
+    			    Email Us
+  			    </a>
+          </li>
+  			  <li>
+  			    <a href="">
+              <svg class="icon-facebook icon-social" viewBox="0 0 32 32">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+  			      Facebook
+            </a>
+          </li>
+  			  <li>
+  			    <a href="">
+              <svg class="icon-twitter icon-social" viewBox="0 0 32 32">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+  			      Twitter
+            </a>
+          </li>
   			</ul>
 		  </div>
 		</section>

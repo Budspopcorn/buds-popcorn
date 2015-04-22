@@ -1,3 +1,44 @@
+
+// Site Mixins
+
+@mixin width-10-col {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@mixin width-8-col {
+  max-width: 792px;
+  margin: 0 auto;
+}
+
+@mixin width-6-col {
+  max-width: 584px;
+  margin: 0 auto;
+}
+
+@mixin title-border {
+  &:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: $green;
+    margin-bottom: 12px;
+  }
+}
+
+@mixin intro {
+  @include width-6-col;
+  margin-bottom: $base;
+  text-align: center;
+
+  @include bp-min-width($medium) {
+    @include font-size(17px);
+    margin-bottom: $base*2;
+  }
+}
+
+// Clearfix
 @mixin cf {
   &:before, &:after {
     content: " ";
@@ -9,22 +50,28 @@
   *zoom:1;
 }
 
+// GLOBAL TRANSITION
+@mixin global-transition {
+	transition: all 0.15s ease-in;
+}
+
 
 // CENTER ALIGN
+
 @mixin vertical-center($position) {
-  @include translateY(-50%);
+  transform: translateY(-50%);
   position: $position;
   top: 50%;
 }
 
 @mixin horizontal-center($position) {
-  @include translateX(-50%);
+  transform: translateX(-50%);
   position: $position;
   left: 50%;
 }
 
 @mixin absolute-center {
-  @include translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,3 +111,4 @@
   border-right: $size solid transparent;
   border-bottom: $size solid $color;
 }
+
