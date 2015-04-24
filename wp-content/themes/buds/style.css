@@ -705,6 +705,11 @@ input[type="submit"].btn, button.btn {
   padding: 24px 0;
 }
 
+.footer p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
 .footer a {
   color: #4c4534;
 }

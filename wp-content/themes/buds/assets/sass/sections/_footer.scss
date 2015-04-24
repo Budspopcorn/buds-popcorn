@@ -3,6 +3,10 @@
   padding: $base 0;
 }
 
+.footer p {
+  @include font-size(13px);
+}
+
 .footer a {
   color: $brown;
   
