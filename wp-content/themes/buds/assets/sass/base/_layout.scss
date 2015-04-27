@@ -1,21 +1,19 @@
 body {
   padding: 0 5px;
   background: $green;
-}
 
-body {
   &.modal-active {
     @include bp-max-width($medium) {
       overflow: hidden;
       height: 100%;
     }
-  }  
+  }
 }
 
 .container {
   padding: 0 20px;
   background: $creme;
-  
+
   @include bp-min-width($medium) {
     @include cf;
     max-width: 1288px;

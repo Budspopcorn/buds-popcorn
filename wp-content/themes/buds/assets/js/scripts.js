@@ -62,7 +62,9 @@ $(function(){
   modal();
   mobileNav();
 
-  $('.modal-body').optiscroll();
+  $('.modal-body').optiscroll({
+    preventParentScroll: true
+  });
 
 });
 
