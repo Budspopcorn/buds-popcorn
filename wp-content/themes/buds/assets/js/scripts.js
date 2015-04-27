@@ -63,7 +63,8 @@ $(function(){
   mobileNav();
 
   $('.modal-body').optiscroll({
-    preventParentScroll: true
+    preventParentScroll: true,
+    forceScrollbars: true
   });
 
 });

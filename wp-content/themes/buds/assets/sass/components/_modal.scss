@@ -60,10 +60,11 @@
 }
 
 .modal-body {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   height: 80%;
 
+  
   @include bp-min-width($medium) {
     height: $base*10;
   }
@@ -72,9 +73,12 @@
 .optiscroll-content {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  overflow: auto;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
   padding-right: 40px;
 }
 

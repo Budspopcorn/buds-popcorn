@@ -610,8 +610,8 @@ input[type="submit"].btn, button.btn {
 }
 
 .modal-body {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   height: 80%;
 }
 @media (min-width: 43.75em) {
@@ -623,9 +623,12 @@ input[type="submit"].btn, button.btn {
 .optiscroll-content {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  overflow: auto;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
   padding-right: 40px;
 }
 
@@ -908,7 +911,8 @@ input[type="submit"].btn, button.btn {
   background: #f8f6e5 url('assets/images/popped-corn.jpg?1429559264') no-repeat center center;
 }
 
-.popcorn p {
+.popcorn p,
+.popcorn ul {
   margin-bottom: 24px;
 }
 
