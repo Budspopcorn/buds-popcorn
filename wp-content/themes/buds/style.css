@@ -606,6 +606,7 @@ input[type="submit"].btn, button.btn {
   font-size: 30px;
   font-size: 1.875rem;
   margin-bottom: 16px;
+  padding-right: 50px;
   color: #477626;
 }
 
@@ -851,8 +852,8 @@ input[type="submit"].btn, button.btn {
 @media (max-width: 43.687em) {
   .story .pic-bud {
     float: right;
-    width: 140px;
-    margin: 0 0 20px 20px;
+    width: 120px;
+    margin: 6px 0 10px 10px;
   }
 }
 
