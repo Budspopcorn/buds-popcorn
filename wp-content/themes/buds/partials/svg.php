@@ -1,4 +1,4 @@
-<svg class="svg-defs" height="0" width="0">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-defs" height="0" width="0" >
   <defs>
 
   	  <path id="icon-email" d="M15.003,13.127L0,1.875C0,0.833,0.834,0,1.875,0h26.256c1.041,0,1.875,0.833,1.875,1.875L15.003,13.127z	 M15.003,16.496L30.006,5.244v15.385c0,1.042-0.834,1.875-1.875,1.875H1.875C0.834,22.504,0,21.671,0,20.629V5.244L15.003,16.496z"/>
