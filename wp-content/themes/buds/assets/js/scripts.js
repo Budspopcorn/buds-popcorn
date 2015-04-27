@@ -14,10 +14,45 @@ $(function(){
         }, 1000);
       }
     });
-    
+
   }
   
+  modal = function() {
+    
+    var trigger = $('.modal-trigger');
+    var closeTrigger = $('.close-modal');
+    var modal = $('#modal');
+    
+    trigger.on('click', function(e) {
+      e.preventDefault();
+  
+      var modalContent = $(this).attr('data-modal-content');
+      
+      modal.toggleClass('is-active');
+      modal.toggleClass('not-active');
+      $(modalContent).toggleClass('is-active');
+      $(modalContent).toggleClass('not-active');
+    });
+
+    closeTrigger.on('click', function(e) {
+      e.preventDefault();
+  
+      var modalWrapper = $('.modal-wrapper.is-active');
+      
+      modal.toggleClass('is-active');
+      modal.toggleClass('not-active');
+      
+      console.log(modalWrapper);
+      
+      modalWrapper.toggleClass('is-active').toggleClass('not-active');
+    });
+    
+  }
+
   navScroll();
+  modal();
+
+  $('.modal-body').optiscroll();
 
 });
 

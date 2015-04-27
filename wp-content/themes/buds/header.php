@@ -10,7 +10,7 @@
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7331754/697946/css/fonts.css" />
-  <script src="<?php echo get_template_directory_uri(); ?>/_/js/modernizr-2.8.0.dev.js"></script>
+<!--   <script src="<?php echo get_template_directory_uri(); ?>/_/js/modernizr-2.8.0.dev.js"></script> -->
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<?php wp_head(); ?>
 </head>
