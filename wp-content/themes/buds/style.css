@@ -179,18 +179,18 @@ em {
 }
 
 /* w: 662 */
-.svg-defs {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
 svg {
   transition: all 0.15s ease-in;
 }
 
 svg:not(:root) {
   overflow: hidden;
+}
+
+.svg-defs {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 
 [class*="icon-"] {
