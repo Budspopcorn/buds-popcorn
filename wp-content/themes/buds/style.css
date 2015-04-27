@@ -282,9 +282,11 @@ body {
   padding: 0 5px;
   background: #477626;
 }
+
 @media (max-width: 43.687em) {
   body.modal-active {
     overflow: hidden;
+    height: 100%;
   }
 }
 
