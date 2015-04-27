@@ -6,7 +6,6 @@
 
 	<?php wp_footer(); ?>
 
-	
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.optiscroll.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/scripts.js"></script>
 </body>

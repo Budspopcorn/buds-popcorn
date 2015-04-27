@@ -1,12 +1,12 @@
 
 .modal {
+  @include transition(all 0.25s ease-in);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 10;
-  transition: all 0.25s ease-in;
 
   @include bp-min-width($medium) {
     position: absolute;
@@ -18,26 +18,26 @@
   }
   
   &.not-active {
+    @include transition-delay(0s);
     visibility: hidden;
     opacity: 0;
-    transition-delay: 0s;
   }
 }
 
 .modal-wrapper {
+  @include transition(all 0.25s ease-in);
   position: fixed;
   top: 0;
   bottom: 0;
   max-width: 600px;
   width: 100%;
-  margin: 0 auto;
   padding: $base*1 20px;
   background: #fff;
   box-shadow: 0 0 30px rgba(#000, 0.1);
-  transition: all 0.25s ease-in;
 
   @include bp-min-width($medium) {
     @include absolute-center;
+    bottom: auto;
     padding: $base*1.5 40px;
   }
     
@@ -47,9 +47,9 @@
   }
   
   &.not-active {
+    @include transition-delay(0s);
     visibility: hidden;
     opacity: 0;
-    transition-delay: 0s;
   }
 }
 
