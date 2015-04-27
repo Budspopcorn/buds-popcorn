@@ -8,9 +8,7 @@ $pad: 20px;
   }
 }
 
-[class*='col-'] {
-  width: 100%;
-  
+[class*='col-'] {  
   @include bp-min-width($medium) {
     float: left;
     padding: 0 $pad;

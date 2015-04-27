@@ -5,14 +5,18 @@
 }
 
 .logo {
-  float: left;
+  position: absolute;
+  top: 8px;
+  z-index: 10;
   width: 100px;
 
-  @include bp-min-width($medium) {
+  @include bp-min-width($xsmall) {
+    width: 144px;
+  }
+
+  @include bp-min-width($large) {
     @include horizontal-center(absolute);
-    top: 8px;
     width: 188px;
-    z-index: 10;
   }
 }
 
@@ -20,27 +24,83 @@
   text-align: center;
 }
 
-.nav li {
-  display: inline-block;
-  margin: 0 36px;
-  
-  &:nth-child(2) {
-    margin-right: 150px;
+.menu-menu-1-container {
+  @include bp-max-width($large) {
+    display: none;
+    width: 100%;
+    clear: both;
+    background: $yellow;
   }
   
-  &:nth-child(3) {
-    margin-left: 150px;
+  &.is-active {
+    display: block;
   }
-
 }
 
-.nav a {
+.nav li {
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(#000, 0.1);
+  }
+
+  @include bp-min-width($large) {
+    display: inline-block;
+    margin: 0 24px;
+  }
+  
+  @include bp-min-width($xlarge) {
+    margin: 0 36px;
+  }
+}
+
+.nav li:nth-child(2) {
+
+  @include bp-min-width($large) {
+    margin-right: 130px;
+  }
+
+  @include bp-min-width($xlarge) {
+    margin-right: 150px;
+  }
+}
+  
+.nav li:nth-child(3) {
+
+  @include bp-min-width($large) {
+    margin-left: 130px;
+  }
+
+  @include bp-min-width($xlarge) {
+    margin-left: 150px;
+  }
+}
+
+.nav li a {
+  @include font-size(19px);
   font-family: $sans;
   color: $green;
   letter-spacing: 0.0125em;
   text-transform: uppercase;
 
-  @include bp-min-width($medium) {
-    @include font-size(19px);
+  @include bp-max-width($large) {
+    display: block;
+    padding: 0.75em;
+  }
+}
+
+
+.btn-mobile {
+  @include font-size(19px);
+  float: right;
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: $yellow;
+  font-family: $sans;
+  color: $green;
+  letter-spacing: 0.0125em;
+  text-transform: uppercase;
+  
+  @include bp-min-width($large) {
+    display: none;
   }
 }

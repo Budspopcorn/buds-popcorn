@@ -17,17 +17,28 @@ $(function(){
 
   }
   
+  mobileNav = function() {
+    var menuBtn = $('.btn-mobile');
+    var navContainter = $('.menu-menu-1-container');
+    
+    menuBtn.on('click', function() {
+      navContainter.toggleClass('is-active');
+    });
+  }
+  
   modal = function() {
     
     var trigger = $('.modal-trigger');
     var closeTrigger = $('.close-modal');
     var modal = $('#modal');
+    var body = $('body');
     
     trigger.on('click', function(e) {
       e.preventDefault();
   
       var modalContent = $(this).attr('data-modal-content');
       
+      body.toggleClass('modal-active');
       modal.toggleClass('is-active');
       modal.toggleClass('not-active');
       $(modalContent).toggleClass('is-active');
@@ -39,11 +50,9 @@ $(function(){
   
       var modalWrapper = $('.modal-wrapper.is-active');
       
+      body.toggleClass('modal-active');
       modal.toggleClass('is-active');
-      modal.toggleClass('not-active');
-      
-      console.log(modalWrapper);
-      
+      modal.toggleClass('not-active');      
       modalWrapper.toggleClass('is-active').toggleClass('not-active');
     });
     
@@ -51,6 +60,7 @@ $(function(){
 
   navScroll();
   modal();
+  mobileNav();
 
   $('.modal-body').optiscroll();
 

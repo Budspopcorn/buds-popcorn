@@ -1,6 +1,12 @@
 body {
-  padding: 0 10px;
+  padding: 0 5px;
   background: $green;
+
+  @include bp-max-width($medium) {
+    &.modal-active {
+      overflow: hidden;
+    }
+  }
 }
 
 .container {

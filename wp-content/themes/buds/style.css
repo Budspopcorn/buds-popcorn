@@ -238,9 +238,6 @@ svg:not(:root) {
   }
 }
 
-[class*='col-'] {
-  width: 100%;
-}
 @media (min-width: 43.75em) {
   [class*='col-'] {
     float: left;
@@ -279,8 +276,13 @@ svg:not(:root) {
 }
 
 body {
-  padding: 0 10px;
+  padding: 0 5px;
   background: #477626;
+}
+@media (max-width: 43.687em) {
+  body.modal-active {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -527,12 +529,18 @@ input[type="submit"].btn, button.btn {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 10;
   transition: all 0.25s ease-in;
+}
+@media (min-width: 43.75em) {
+  .modal {
+    position: absolute;
+  }
 }
 .modal.is-active {
   visibility: visible;
@@ -545,17 +553,25 @@ input[type="submit"].btn, button.btn {
 }
 
 .modal-wrapper {
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
-  padding: 36px 40px;
+  padding: 24px 20px;
   background: #fff;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   transition: all 0.25s ease-in;
+}
+@media (min-width: 43.75em) {
+  .modal-wrapper {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 36px 40px;
+  }
 }
 .modal-wrapper.is-active {
   visibility: visible;
@@ -577,8 +593,12 @@ input[type="submit"].btn, button.btn {
 .modal-body {
   overflow: hidden;
   position: relative;
-  height: 240px;
-  /*   height: $base*12; */
+  height: 80%;
+}
+@media (min-width: 43.75em) {
+  .modal-body {
+    height: 240px;
+  }
 }
 
 .optiscroll-content {
@@ -587,7 +607,7 @@ input[type="submit"].btn, button.btn {
   right: 0;
   bottom: 0;
   left: 0;
-  padding-right: 30px;
+  padding-right: 40px;
 }
 
 .optiscroll-v {
@@ -613,12 +633,17 @@ input[type="submit"].btn, button.btn {
 
 .close-modal {
   position: absolute;
-  top: -46px;
+  top: 0;
   right: 0;
   width: 46px;
   height: 46px;
   padding: 12px 0 0 12px;
   background: #f6d555;
+}
+@media (min-width: 43.75em) {
+  .close-modal {
+    top: -46px;
+  }
 }
 
 .icon-close {
@@ -633,17 +658,22 @@ input[type="submit"].btn, button.btn {
 }
 
 .logo {
-  float: left;
+  position: absolute;
+  top: 8px;
+  z-index: 10;
   width: 100px;
 }
-@media (min-width: 43.75em) {
+@media (min-width: 31.25em) {
+  .logo {
+    width: 144px;
+  }
+}
+@media (min-width: 62.5em) {
   .logo {
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
-    top: 8px;
     width: 188px;
-    z-index: 10;
   }
 }
 
@@ -651,27 +681,85 @@ input[type="submit"].btn, button.btn {
   text-align: center;
 }
 
-.nav li {
-  display: inline-block;
-  margin: 0 36px;
+@media (max-width: 62.437em) {
+  .menu-menu-1-container {
+    display: none;
+    width: 100%;
+    clear: both;
+    background: #f6d555;
+  }
 }
-.nav li:nth-child(2) {
-  margin-right: 150px;
-}
-.nav li:nth-child(3) {
-  margin-left: 150px;
+.menu-menu-1-container.is-active {
+  display: block;
 }
 
-.nav a {
+.nav li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 62.5em) {
+  .nav li {
+    display: inline-block;
+    margin: 0 24px;
+  }
+}
+@media (min-width: 68.75em) {
+  .nav li {
+    margin: 0 36px;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .nav li:nth-child(2) {
+    margin-right: 130px;
+  }
+}
+@media (min-width: 68.75em) {
+  .nav li:nth-child(2) {
+    margin-right: 150px;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .nav li:nth-child(3) {
+    margin-left: 130px;
+  }
+}
+@media (min-width: 68.75em) {
+  .nav li:nth-child(3) {
+    margin-left: 150px;
+  }
+}
+
+.nav li a {
+  font-size: 19px;
+  font-size: 1.1875rem;
   font-family: "Knockout 71 A", "Knockout 71 B", Helvetica, arial, sans-serif;
   color: #477626;
   letter-spacing: 0.0125em;
   text-transform: uppercase;
 }
-@media (min-width: 43.75em) {
-  .nav a {
-    font-size: 19px;
-    font-size: 1.1875rem;
+@media (max-width: 62.437em) {
+  .nav li a {
+    display: block;
+    padding: 0.75em;
+  }
+}
+
+.btn-mobile {
+  font-size: 19px;
+  font-size: 1.1875rem;
+  float: right;
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #f6d555;
+  font-family: "Knockout 71 A", "Knockout 71 B", Helvetica, arial, sans-serif;
+  color: #477626;
+  letter-spacing: 0.0125em;
+  text-transform: uppercase;
+}
+@media (min-width: 62.5em) {
+  .btn-mobile {
+    display: none;
   }
 }
 
@@ -693,11 +781,16 @@ input[type="submit"].btn, button.btn {
 
 .hero {
   position: relative;
-  padding: 144px 5% 48px;
+  padding: 96px 5% 48px;
   background: #477626 url('assets/images/bg-hero.jpg?1429557959') no-repeat center center;
   background-size: cover;
 }
 @media (min-width: 43.75em) {
+  .hero {
+    height: 480px;
+  }
+}
+@media (min-width: 68.75em) {
   .hero {
     height: 624px;
   }
@@ -708,12 +801,32 @@ input[type="submit"].btn, button.btn {
     position: absolute;
     left: 5%;
     bottom: 72px;
-    max-width: 600px;
+    max-width: 580px;
   }
 }
 
 .story {
-  padding: 96px 0;
+  padding: 48px 0 72px;
+}
+@media (min-width: 43.75em) {
+  .story {
+    padding: 96px 0;
+  }
+}
+
+@media (max-width: 62.437em) {
+  .story .col-1-2 {
+    float: none;
+    width: auto;
+  }
+}
+
+@media (max-width: 43.687em) {
+  .story .pic-bud {
+    float: right;
+    width: 140px;
+    margin: 0 0 20px 20px;
+  }
 }
 
 .story .pic-bud img {
@@ -725,11 +838,20 @@ input[type="submit"].btn, button.btn {
   margin-bottom: 24px;
 }
 
+.story .content .col-1-2:last-child p:last-child {
+  margin-bottom: 0;
+}
+
 .popcorn {
   position: relative;
-  padding: 96px 0;
+  padding: 72px 0;
   border-top: 2px solid #f6d555;
   border-bottom: 2px solid #f6d555;
+}
+@media (min-width: 43.75em) {
+  .popcorn {
+    padding: 120px 0;
+  }
 }
 
 .popcorn:before {
@@ -775,11 +897,18 @@ input[type="submit"].btn, button.btn {
 .popcorn-links li {
   font-size: 15px;
   font-size: 0.9375rem;
-  float: left;
   font-weight: 700;
 }
 .popcorn-links li:first-child {
-  margin-right: 70px;
+  margin-bottom: 12px;
+}
+@media (min-width: 43.75em) {
+  .popcorn-links li {
+    float: left;
+  }
+  .popcorn-links li:first-child {
+    margin-right: 70px;
+  }
 }
 
 .popcorn-links .icon-arrow {
@@ -816,19 +945,24 @@ input[type="submit"].btn, button.btn {
 }
 @media (min-width: 43.75em) {
   .contact {
+    padding: 96px 0;
+  }
+}
+@media (min-width: 62.5em) {
+  .contact {
     min-height: 530px;
   }
 }
 
 .contact .wrapper {
-  position: absolute;
-  left: 5%;
-  bottom: 24px;
-  max-width: 600px;
+  padding: 0 5%;
 }
-@media (min-width: 43.75em) {
+@media (min-width: 62.5em) {
   .contact .wrapper {
+    position: absolute;
+    left: 5%;
     bottom: 72px;
+    max-width: 600px;
   }
 }
 
@@ -843,12 +977,21 @@ input[type="submit"].btn, button.btn {
 .contact li {
   font-size: 24px;
   font-size: 1.5rem;
-  float: left;
-  margin-right: 80px;
   font-family: "Knockout 71 A", "Knockout 71 B", Helvetica, arial, sans-serif;
 }
-.contact li:last-child {
-  margin-right: 0;
+@media (max-width: 43.687em) {
+  .contact li {
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 43.75em) {
+  .contact li {
+    float: left;
+    margin-right: 80px;
+  }
+  .contact li:last-child {
+    margin-right: 0;
+  }
 }
 
 .contact a {

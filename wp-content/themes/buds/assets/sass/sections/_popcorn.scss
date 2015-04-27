@@ -1,9 +1,13 @@
 
 .popcorn {
   position: relative;
-  padding: $base*4 0;
+  padding: $base*3 0;
   border-top: 2px solid $yellow;
   border-bottom: 2px solid $yellow;
+
+  @include bp-min-width($medium) {
+    padding: $base*5 0;
+  }
 }
 
 .popcorn:before {
@@ -37,11 +41,18 @@
 
 .popcorn-links li {
   @include font-size(15px);
-  float: left;
   font-weight: $bold;
   
   &:first-child {
-    margin-right: 70px;
+    margin-bottom: 12px;
+  }
+  
+  @include bp-min-width($medium) {
+    float: left;
+  
+    &:first-child {
+      margin-right: 70px;
+    }
   }
 }
 

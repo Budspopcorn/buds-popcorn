@@ -21,6 +21,7 @@
 		  <div class="wrapper">
   			<div class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Bud's Popcorn"></div>
     		<nav id="nav" class="nav">
+    		  <a href="" class="btn-mobile">Menu</a>
     			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
     		</nav>
 		  </div>
