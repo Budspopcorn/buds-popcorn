@@ -870,6 +870,26 @@ input[type="submit"].btn, button.btn {
   margin-bottom: 0;
 }
 
+.founder {
+  position: relative;
+}
+
+.founder img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.founder p {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  font-weight: bold;
+}
+
 .popcorn {
   position: relative;
   padding: 72px 0;

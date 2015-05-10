@@ -34,3 +34,18 @@
 .story .content .col-1-2:last-child p:last-child {
   margin-bottom: 0;
 }
+
+.founder {
+  position: relative;
+}
+
+.founder img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.founder p {
+  @include vertical-center(absolute);
+  left: 100px;
+  font-weight: bold;
+}

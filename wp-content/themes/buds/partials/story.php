@@ -11,6 +11,10 @@
       			</div>
       			<div class="col-1-2">
         			<?php the_field('buds_story_column_2'); ?>
+        			<div class="founder">
+      		      <img src="/wp-content/themes/buds/assets/images/pic-brad.jpg" alt="Brad Cessna">
+      		      <p>Brad Cessna, Founder</p>
+        			</div>
       			</div>
     			</div>
   			</div>
