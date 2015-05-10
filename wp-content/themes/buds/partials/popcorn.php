@@ -1,6 +1,6 @@
 		<section id="popcorn" class="popcorn">
 		  <div class="wrapper row">
-		    <div class="col-1-2">
+		    <div class="col-1-2 col-bag-bowl">
 		      <img src="/wp-content/themes/buds/assets/images/popcorn.jpg" alt="Popcorn">
 		    </div>
 		    <div class="col-1-2">

@@ -912,6 +912,10 @@ input[type="submit"].btn, button.btn {
   background: #f8f6e5 url('assets/images/popped-corn.jpg?1429559264') no-repeat center center;
 }
 
+.col-bag-bowl {
+  padding: 0;
+}
+
 .popcorn p,
 .popcorn ul {
   margin-bottom: 24px;

@@ -63,7 +63,6 @@ $(function(){
   mobileNav();
 
   $('.modal-body').optiscroll({
-/*     preventParentScroll: true, */
     forceScrollbars: true
   });
 
