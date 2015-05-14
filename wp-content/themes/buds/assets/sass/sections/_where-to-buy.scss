@@ -1,11 +1,23 @@
 
 .where-to-buy {
-  padding: $base*4 0;
-  
-  .content {
-    max-width: 720px;
+  padding: $base*2.5 0 $base*1;
+
+  @include bp-min-width($medium) {
+    padding: $base*4 0 $base*3;
+  }  
+}
+
+.where-to-buy .content {
+  max-width: 720px;
+  margin-bottom: $base;
+
+  @include bp-min-width($medium) {
     margin-bottom: $base*2;
   }
+}
+
+.locations .col-1-3 {
+  margin-bottom: $base;
 }
 
 .locations .col-1-3 h3 {

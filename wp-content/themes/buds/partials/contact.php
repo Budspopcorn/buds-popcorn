@@ -3,7 +3,7 @@
   			<?php the_field('contact_us'); ?>
   			<ul class="contact-links">
   			  <li>
-  			    <a href="">
+  			    <a href="mailto:cessnafarms@gmail.com">
               <svg class="icon-email" viewBox="0 0 30 22.5">
                 <use xlink:href="#icon-email"></use>
               </svg>
@@ -11,7 +11,7 @@
   			    </a>
           </li>
   			  <li>
-  			    <a href="">
+  			    <a href="https://www.facebook.com/BudsPopcorn">
               <svg class="icon-facebook icon-social" viewBox="0 0 32 32">
                 <use xlink:href="#icon-facebook"></use>
               </svg>
@@ -19,7 +19,7 @@
             </a>
           </li>
   			  <li>
-  			    <a href="">
+  			    <a href="https://www.twitter.com/BudsPopcorn">
               <svg class="icon-twitter icon-social" viewBox="0 0 32 32">
                 <use xlink:href="#icon-twitter"></use>
               </svg>
