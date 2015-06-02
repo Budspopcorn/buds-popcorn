@@ -1,16 +1,19 @@
 
 .modal {
-  @include transition(all 0.25s ease-in);
+/*   @include transition(all 0.25s ease-in); */
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 10;
+  display: none;
 
   @include bp-min-width($medium) {
     position: absolute;
   }
   
+/*
   &.is-active {
     visibility: visible;
     opacity: 1;
@@ -23,10 +26,11 @@
     opacity: 0;
     z-index: -1;
   }
+*/
 }
 
 .modal-wrapper {
-  @include transition(all 0.25s ease-in);
+/*   @include transition(all 0.25s ease-in); */
   position: fixed;
   top: 0;
   bottom: 0;
@@ -35,13 +39,24 @@
   padding: $base*1 20px;
   background: #fff;
   box-shadow: 0 0 30px rgba(#000, 0.1);
+  display: none;
 
   @include bp-min-width($medium) {
     @include absolute-center;
     bottom: auto;
     padding: $base*1.5 40px;
   }
-    
+
+/*
+  &.is-active {
+    display: block;
+  }
+  
+  &.not-active {
+  }
+*/
+ 
+/*
   &.is-active {
     visibility: visible;
     opacity: 1;
@@ -53,6 +68,7 @@
     opacity: 0;
     z-index: 0;
   }
+*/
 }
 
 .modal-title {
