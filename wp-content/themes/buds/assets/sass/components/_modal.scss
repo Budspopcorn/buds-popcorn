@@ -21,7 +21,7 @@
     @include transition-delay(0s);
     visibility: hidden;
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
   }
 }
 
@@ -51,6 +51,7 @@
     @include transition-delay(0s);
     visibility: hidden;
     opacity: 0;
+    z-index: 0;
   }
 }
 
