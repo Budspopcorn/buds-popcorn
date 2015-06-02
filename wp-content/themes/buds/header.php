@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7331754/697946/css/fonts.css" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
