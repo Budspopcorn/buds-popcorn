@@ -36,12 +36,12 @@ $(function(){
       var modalContent = $(this).attr('data-modal-content');
       
       body.toggleClass('modal-active');
-        modal.toggleClass('is-active');
-        modal.toggleClass('not-active');
-        $(modalContent).toggleClass('is-active');
-        $(modalContent).toggleClass('not-active');
+      modal.toggleClass('is-active');
+      modal.toggleClass('not-active');
+      $(modalContent).toggleClass('is-active');
+      $(modalContent).toggleClass('not-active');
       modal.fadeIn('slow');
-        $(modalContent).fadeIn('slow');
+      $(modalContent).fadeIn('slow');
     });
 
     closeTrigger.on('click', function(e) {
@@ -62,6 +62,8 @@ $(function(){
   modal();
   mobileNav();
 
-  $('.modal-body').optiscroll();
+  $('.modal-body').optiscroll({
+    forceScrollbars: true
+  });
 
 });

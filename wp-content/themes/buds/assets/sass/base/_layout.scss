@@ -6,6 +6,7 @@ body {
     @include bp-max-width($medium) {
       overflow: hidden;
       height: 100%;
+      position: fixed;
     }
   }
 }
