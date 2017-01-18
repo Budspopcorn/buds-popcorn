@@ -5,7 +5,10 @@
   			</div>
   			<div class="row locations">
         <?php
-        $args = array( 'post_type' => 'location' );
+        $args = array(
+					'post_type' => 'location',
+					'posts_per_page' => -1
+				);
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
         	<div class="col-1-3">
@@ -14,7 +17,7 @@
         		<p class="city-state"><?php echo get_field('city') . ', ' . get_field('state') . ' ' . get_field('zip'); ?></p>
         		<p><a href="<?php the_field('map_link'); ?>" target="_blank">View Map</a></p>
         	</div>
-        <?php endforeach; 
+        <?php endforeach;
         wp_reset_postdata();?>
   			</div>
 		  </div>
